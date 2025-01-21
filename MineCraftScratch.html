@@ -50,10 +50,14 @@
         .side-description {
             padding: 15px;
             background-color: white;
-            text-align: center;
+            text-align: left; /* Left-align the text */
             font-size: 18px;
             margin-left: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px; /* Constrain the width of the description box */
+            width: 100%; /* Make the description box responsive */
+            height: auto; /* Let it grow naturally */
+            overflow-wrap: break-word; /* Ensure the text wraps appropriately */
         }
 
         /* Reload game button styling */
@@ -87,14 +91,18 @@
                     allowfullscreen></iframe>
         </div>
 
-        <!-- Side description box without lime color -->
+        <!-- Side description box -->
         <div class="side-description">
-            Move - W/A/S/D Toggle run - R
-Look around - drag mouse Toggle fly - F
-Jump - SPACE Up/Down - Q/Z
-
-Dig - Mouse click Add Block - Hold E + Mouse click
-Block Type - 1-9 Settings - P
+            Move - W/A/S/D<br>
+            Toggle run - R<br>
+            Look around - drag mouse<br>
+            Toggle fly - F<br>
+            Jump - SPACE<br>
+            Up/Down - Q/Z<br><br>
+            Dig - Mouse click<br>
+            Add Block - Hold E + Mouse click<br>
+            Block Type - 1-9<br>
+            Settings - P
         </div>
     </div>
 
@@ -112,5 +120,4 @@ Block Type - 1-9 Settings - P
     </script>
 </body>
 </html>
-
 
