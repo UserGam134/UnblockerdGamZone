@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Iframe</title>
+    <style>
+        /* Make the entire page take the full screen height */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        /* Box for the iframe */
+        .iframe-box {
+            width: 500px;
+            height: 420px;
+            background-color: white;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-box">
+        <iframe src="https://scratch.mit.edu/projects/50029544/embed" 
+                allowtransparency="true" 
+                width="485" 
+                height="402" 
+                frameborder="0" 
+                scrolling="no" 
+                allowfullscreen></iframe>
+    </div>
+</body>
+</html>
