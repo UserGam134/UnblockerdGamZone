@@ -1,23 +1,16 @@
-CSS
-
-
-
-
-
-
-
 /* General Body Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('background.jpg'); /* Path to your background image */
-  background-size: cover; /* Ensures the image covers the entire page */
-  background-position: center; /* Centers the image */
-  background-attachment: fixed; /* Keeps the background fixed during scrolling */
-  background-color: #e6f7e6; /* Fallback color in case the image isn't available */
+  background-color: #f0f8e4; /* Very light lime background */
   text-align: center;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  height: 100vh; /* Ensure the body takes full viewport height */
 }
 
 /* Title Box with Logo (Extended across the screen) */
@@ -75,8 +68,10 @@ body {
   align-items: center; /* Center the navbar items vertically */
   margin-top: 10px; /* Added small gap between "Navigation Bar" title and navbar */
   padding: 0 10px; /* Optional padding for better spacing */
+  width: 100%;
 }
 
+/* Nav Items - Centering for Navbar */
 .nav-item {
   display: inline-block;
   background-color: lime; /* Lime background */
@@ -177,3 +172,4 @@ body {
   color: #333;
   margin-top: 10px;
 }
+
