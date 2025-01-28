@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <style>
+        /* Make the entire page take the full screen height */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Container for iframe and description side by side */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Box for the iframe */
+        .iframe-box {
+            width: 1200px;
+            height: 600px;
+            background-color: white;
+            border: 2px solid #aaff55; /* Light lime color */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        /* Side description box styling */
+        .side-description {
+            padding: 15px;
+            background-color: white;
+            text-align: left; /* Left-align the text */
+            font-size: 18px;
+            margin-left: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px; /* Constrain the width of the description box */
+            width: 100%; /* Make the description box responsive */
+            height: auto; /* Let it grow naturally */
+            overflow-wrap: break-word; /* Ensure the text wraps appropriately */
+        }
+
+        /* Reload game button styling */
+        .reload-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #90EE90; /* Light green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title at the top of the page -->
+    <h1>Pong</h1>
+
+    <div class="container">
+        <!-- Box for the iframe -->
+        <div class="iframe-box">
+            <iframe id="iframe" src="https://codepen.io/klokt-valg/full/xNwamQ" 
+                    allowtransparency="true" 
+                    width="1200" 
+                    height="600" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <!-- Side description box -->
+        <div class="side-description">
+            Test
+            <a href="Home.html">Return to home page (Click Here)</a>
+        </div>
+    </div>
+
+    <!-- Reload Game Button -->
+    <button class="reload-btn" onclick="reloadGame()">Reload Game</button>
+
+    <script>
+        function reloadGame() {
+            const iframe = document.getElementById('iframe');
+            const iframeSrc = iframe.src;
+
+            // Add the reload parameter to the iframe URL to simulate reloading
+            iframe.src = iframeSrc.includes("muted=true") ? iframeSrc : iframeSrc + "?muted=true";
+        }
+    </script>
+</body>
+</html>
